@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.proyecto.controlador_excepciones.HistorialClinicoNotFoundException;
-import com.proyecto.models.Historial_Clinico;
+import com.proyecto.model.Historial_Clinico;
 import com.proyecto.repositories.Historial_Clinico_DAO;
 
 @Service

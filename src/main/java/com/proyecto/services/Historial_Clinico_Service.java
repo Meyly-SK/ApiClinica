@@ -2,7 +2,7 @@ package com.proyecto.services;
 
 import java.util.List;
 
-import com.proyecto.models.Historial_Clinico;
+import com.proyecto.model.Historial_Clinico;
 
 public interface Historial_Clinico_Service {
 

@@ -1,4 +1,4 @@
-package com.proyecto.models;
+package com.proyecto.model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -20,27 +20,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "medico")
-public class Medico implements Serializable {
+@Table(name = "paciente")
+public class Paciente implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "medico_id")
+	@Column(name = "paciente_id")
 	private int  id;
-	
-	@Column(name = "medico_especialidad")
-	private String especialidad;
 	
 	@OneToOne
 	@JoinColumn(name = "usuario_id")
 	private Usuario usuario;
 	
-	@OneToMany(mappedBy = "medico")
+	@OneToMany(mappedBy = "paciente")
     private List<Cita> citas;
 	
-	@OneToMany(mappedBy = "medicoH")
+	@OneToMany(mappedBy = "pacienteH")
     private List<Historial_Clinico> historiales;
-	
+    
 }

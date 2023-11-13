@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.proyecto.models.Historial_Clinico;
+import com.proyecto.model.Historial_Clinico;
 import com.proyecto.services.Historial_Clinico_ServiceImpl;
 
 @Controller
