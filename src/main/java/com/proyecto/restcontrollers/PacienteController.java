@@ -1,4 +1,4 @@
-package com.proyecto.controllers;
+package com.proyecto.restcontrollers;
 
 import java.util.List;
 

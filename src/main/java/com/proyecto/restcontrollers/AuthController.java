@@ -1,4 +1,4 @@
-package com.proyecto.controllers;
+package com.proyecto.restcontrollers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
