@@ -13,4 +13,6 @@ public interface MedicoService {
 	 public List<Medico> obtenerTodosLosMedicos();
 
 	 public void eliminarMedico(int id);
+	 
+	 public Medico actualizarMedico(Medico medico);
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.proyecto.model.Medico;
 import com.proyecto.repositories.IMedicoRepository;
+import com.proyecto.utils.UtilsApi.Role;
 
 @Service
 public class MedicoServiceImpl implements MedicoService {
@@ -22,6 +23,7 @@ public class MedicoServiceImpl implements MedicoService {
     public Medico guardarMedico(Medico medico) {
 		String claveEncriptada = passwordEncoder.encode(medico.getUsuario().getClave());
 		medico.getUsuario().setClave(claveEncriptada);
+		medico.getUsuario().setRole(Role.PERSONAL_MEDICO);
         return medicoRepository.save(medico);
     }
 
@@ -39,4 +41,16 @@ public class MedicoServiceImpl implements MedicoService {
     public void eliminarMedico(int id) {
         medicoRepository.deleteById(id);
     }
+
+	@Override
+	public Medico actualizarMedico(Medico medico) {
+		try {
+			String claveEncriptada = passwordEncoder.encode(medico.getUsuario().getClave());
+			medico.getUsuario().setClave(claveEncriptada);
+			medico.getUsuario().setRole(Role.PERSONAL_MEDICO);
+			return medicoRepository.save(medico);
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 }
