@@ -20,8 +20,6 @@ public class HistorialServiceImpl implements HistorialService{
 	@Override
 	public HistorialClinico guardar_HC(HistorialClinico historialClinico) {
 
-		//return this.historialRepository.save(historialClinico);
-
 		if (historialClinico == null) {
 	        throw new IllegalArgumentException("El historial clínico no puede ser nulo");
 	    }
@@ -44,8 +42,6 @@ public class HistorialServiceImpl implements HistorialService{
 
 	@Override
 	public HistorialClinico actualizar_HC(HistorialClinico historialClinico) {
-
-		//return this.historialRepository.save(historialClinico);
 
 		if (historialClinico == null) {
 	        throw new IllegalArgumentException("El historial clínico no puede ser nulo");
