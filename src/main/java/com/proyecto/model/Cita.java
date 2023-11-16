@@ -1,6 +1,7 @@
 package com.proyecto.model;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import jakarta.persistence.CascadeType;

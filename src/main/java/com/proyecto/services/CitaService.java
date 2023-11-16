@@ -2,11 +2,9 @@ package com.proyecto.services;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
 
 import com.proyecto.model.Cita;
 
-@Repository
 public interface CitaService {
 
 	public Cita guardarCita(Cita cita);
