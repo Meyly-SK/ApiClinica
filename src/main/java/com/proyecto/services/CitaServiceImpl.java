@@ -33,4 +33,16 @@ public class CitaServiceImpl implements CitaService{
 	public void eliminarCita(Long id) {
 		citarepository.deleteById(id);
 	}
+
+	@Override
+	public Cita actualizarCita(Cita cita) {
+		// TODO Auto-generated method stub
+		try {
+			Cita savedCita = this.citarepository.save(cita);
+			return savedCita;
+		} catch (Exception e) {
+			throw e;
+		}
+
+	}
 }

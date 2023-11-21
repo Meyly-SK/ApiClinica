@@ -38,4 +38,14 @@ public class PacienteServiceImpl implements PacienteService{
 		pacienteRepo.deleteById(id);
 		
 	}
+
+	@Override
+	public Paciente actualizarPaciente(Paciente paciente) {
+		try {
+			Paciente savedPaciente = this.pacienteRepo.save(paciente);
+			return savedPaciente;
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 }

@@ -13,4 +13,5 @@ public interface CitaService {
 	public Cita buscarCitaporId(Long id);
 	public List<Cita> ListarCitas();
 	public void eliminarCita(Long id);
+	public Cita actualizarCita(Cita cita);
 }
