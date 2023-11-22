@@ -36,11 +36,11 @@ private final static long serialVersionUID = 1L;
 	@Column(name = "cita_motivo")
 	private String cita_motivo;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name = "paciente_id")
 	private Paciente paciente;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name = "medico_id")
 	private Medico medico;
 }

@@ -42,13 +42,9 @@ public class CitaController {
 		citaService.eliminarCita(id);
 	}
 	
-	//En revision
-	
-	/*@PutMapping(value="/{id}")
+	@PutMapping(value="/{id}")
 	public Cita actualizarCita(@RequestBody Cita cita, @PathVariable("id") Long id){
 		cita.setCita_id(id);
-		cita.getPaciente().setId(obtenerCitaporId(id).getPaciente().getId());
-		cita.getMedico().setId(obtenerCitaporId(id).getMedico().getId());
 		return citaService.actualizarCita(cita);
-	} */
+	} 
 }

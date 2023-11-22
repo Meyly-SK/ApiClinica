@@ -42,7 +42,7 @@ public class PacienteController {
         serviPaciente.eliminarPaciente(id);
     }
     
-    @PutMapping(value="/{id}")
+    @PutMapping("/{id}")
     public Paciente actualizarPaciente(@RequestBody Paciente paciente, @PathVariable("id") int id) {
     	paciente.setId(id);
     	paciente.getUsuario().setId(obtenerPacientePorId(id).getUsuario().getId());
